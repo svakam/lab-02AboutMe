@@ -119,30 +119,37 @@ littleDemons();
 
 //QUESTION 7.
 
-var childsName = ['lilly', 'isabella', 'lieng', 'katherine'];
-var guessCount = 5;
-var correctGuessFlag = false;
-var theirGuessAtName = prompt('Can you guess one of my childrens names?').toLowerCase();
-console.log(theirGuessAtName);
 
-while (guessCount > 0 && correctGuessFlag === false) {
+function names() {
+    var childsName = ['lilly', 'isabella', 'lieng', 'katherine'];
+    var guessCount = 5;
+    var correctGuessFlag = false;
+    var theirGuessAtName = prompt('Can you guess one of my childrens names?').toLowerCase();
+    console.log(theirGuessAtName);
 
-    guessCount--;
-    for (var i = 0; i < childsName.length; i++) {
-        if (childsName[i] === theirGuessAtName) {
-            totalScore++;
-            console.log(totalScore, 'question 7');
-            correctGuessFlag = true;
+    while (guessCount > 0 && correctGuessFlag === false) {
 
+        guessCount--;
+        for (var i = 0; i < childsName.length; i++) {
+            if (childsName[i] === theirGuessAtName) {
+                totalScore++;
+                console.log(totalScore, 'question 7');
+                correctGuessFlag = true;
+
+            }
+        }
+
+        if (correctGuessFlag === false) {
+            theirGuessAtName = prompt('try again').toLowerCase();
         }
     }
+    console.log(correctGuessFlag);
+    alert('In case you were wondering my children\'s names are Lilly, Isabella, Lieng, and Katherine.');
 
-    if (correctGuessFlag === false) {
-        theirGuessAtName = prompt('try again').toLowerCase();
-    }
+
 }
-console.log(correctGuessFlag);
-alert('In case you were wondering my children\'s names are Lilly, Isabella, Lieng, and Katherine.');
+
+names();
 
 
 
