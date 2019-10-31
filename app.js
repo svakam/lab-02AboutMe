@@ -88,28 +88,34 @@ else if (bird === 'no') {
 
 //QUESTION 6.
 
-var correctAnswer = 4;
-var guessCounter = 4;
-var userResponse = prompt('Guess how many children we have?');
+function littleDemons() {
+
+    var correctAnswer = 4;
+    var guessCounter = 4;
+    var userResponse = prompt('Guess how many children we have?');
 
 
-while (guessCounter > 0 && userResponse !== '4') {
-    if (userResponse > '4') {
-        userResponse = prompt('You are to high!');
+    while (guessCounter > 0 && userResponse !== '4') {
+        if (userResponse > '4') {
+            userResponse = prompt('You are to high!');
+        }
+        else if (userResponse < '4') {
+            userResponse = prompt('You are to low!');
+        }
+        guessCounter--;
     }
-    else if (userResponse < '4') {
-        userResponse = prompt('You are to low!');
+    if (userResponse === '4') {
+
+        totalScore++;
+        console.log(totalScore, 'question 6');
+
     }
-    guessCounter--;
-}
-if (userResponse === '4') {
 
-    totalScore++;
-    console.log(totalScore, 'question 6');
+    alert('In case you are dying to know we have 4 children!');
 
 }
 
-alert('In case you are dying to know we have 4 children!');
+littleDemons();
 
 //QUESTION 7.
 
