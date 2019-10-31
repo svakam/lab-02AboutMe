@@ -35,6 +35,7 @@ if (children === 'yes') {
     totalScore++;
     console.log(totalScore, 'question 2');
 }
+
 else if (children === 'no') {
     //console.log('You are incorrect, I do have children.');
     alert('You are incorrect, I do have children.');
